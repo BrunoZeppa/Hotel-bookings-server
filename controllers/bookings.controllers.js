@@ -58,6 +58,7 @@ const uploadPayMethodToModal = catchAsync(async (req, res, next) => {
     const hashedCard = await bcrypt.hash(cardNumber, salt);
 
     const newPayMethod = await PayMethod.create({
+        userId: sessionUser.id,
         payType,
         cardNumber: hashedCard,
     });

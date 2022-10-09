@@ -11,6 +11,10 @@ const PayMethod = db.define("payMethod", {
         allowNull: false,
         type: DataTypes.STRING,
     },
+    userId: {
+        allowNull: false,
+        type: DataTypes.INTEGER,
+    },
     cardNumber: {
         allowNull: false,
         type: DataTypes.STRING,

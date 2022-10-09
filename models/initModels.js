@@ -17,6 +17,9 @@ const initModels = () => {
     //una reserva tiene muchas imagenes, en este caso la imagen de la tarjeta de credito, la identificación de la persona y sus datos de facturación
     Booking.hasMany(BookingImg, { foreignKey: "bookingId" });
     BookingImg.belongsTo(Booking);
+    //un usuario puede almacenar diferentes metodos de pago
+    User.hasMany(PayMethod, { foreignKey: "userId" });
+    PayMethod.belongsTo(User);
 };
 
 module.exports = { initModels };
