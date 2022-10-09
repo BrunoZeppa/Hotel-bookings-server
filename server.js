@@ -18,11 +18,12 @@ const startServer = async () => {
         await db.sync();
 
         // vamos a declarar nuestro puerto en una variable para tener la opción de que sea dinámico
-        const PORT = 4031; //ponemos el numero que queramos, ideal que no se repita con el de otro proyeto, ya que no pueden estar 2 puertos encendidos a la vez
+        const PORT = 8080; //ponemos el numero que queramos, ideal que no se repita con el de otro proyeto, ya que no pueden estar 2 puertos encendidos a la vez
+        const HOST = "0.0.0.0";
 
         // ponemos nuestra app la escuha de eventos
-        app.listen(PORT, () => {
-            console.log(`express app running! port${PORT}`);
+        app.listen(PORT, HOST, () => {
+            console.log(`express app running in http://${HOST}:${PORT}`);
         });
     } catch (error) {
         console.log(error);

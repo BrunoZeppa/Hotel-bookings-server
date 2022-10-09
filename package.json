@@ -2,9 +2,9 @@
   "name": "tugerente-technicaltest",
   "version": "1.0.0",
   "description": "Demo app for hotel reservations",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "node server.js"
   },
   "author": "Bruno Zeppa",
   "license": "ISC",
