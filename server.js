@@ -22,7 +22,7 @@ const startServer = async () => {
 
         // ponemos nuestra app la escuha de eventos
         app.listen(PORT, () => {
-            console.log("express app running! :D");
+            console.log(`express app running! port${PORT}`);
         });
     } catch (error) {
         console.log(error);
