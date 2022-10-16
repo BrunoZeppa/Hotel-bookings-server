@@ -1,12 +1,10 @@
 FROM node:16.15-alpine3.14
 
-WORKDIR /app
+COPY app.js /app.js
 
 COPY package.json .
 RUN npm install
 
-COPY . .
-
 EXPOSE 8080
 
-CMD ["npm", "start"]
+CMD ["node", "/app.js"]
